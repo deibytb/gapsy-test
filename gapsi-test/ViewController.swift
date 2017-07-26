@@ -32,6 +32,7 @@ class ViewController: UIViewController {
 
     @IBAction func searchButton(_ sender: UIButton) {
         getCoursesPublic()
+        saveWordSearch(wordSearch: searchText.text!)
     }
     
     func getCoursesPublic() {
@@ -56,6 +57,14 @@ class ViewController: UIViewController {
                 productsViewController.products = self.products
             }
         }
+    }
+    
+    func saveWordSearch (wordSearch: String) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let word = Search(context: context)
+        word.word = wordSearch
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
 
 }
