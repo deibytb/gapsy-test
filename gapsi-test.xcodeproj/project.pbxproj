@@ -20,6 +20,7 @@
 		C498F2701F2815A800D0B1FA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F26F1F2815A800D0B1FA /* Product.swift */; };
 		C498F2721F282CCE00D0B1FA /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F2711F282CCE00D0B1FA /* ProductsTableViewController.swift */; };
 		C498F2741F2834E600D0B1FA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F2731F2834E600D0B1FA /* ProductTableViewCell.swift */; };
+		C498F2771F2840DF00D0B1FA /* words.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C498F2751F2840DF00D0B1FA /* words.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C498F26F1F2815A800D0B1FA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C498F2711F282CCE00D0B1FA /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		C498F2731F2834E600D0B1FA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		C498F2761F2840DF00D0B1FA /* words.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = words.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				C498F2421F280D2200D0B1FA /* Assets.xcassets */,
 				C498F2441F280D2200D0B1FA /* LaunchScreen.storyboard */,
 				C498F2471F280D2200D0B1FA /* Info.plist */,
+				C498F2751F2840DF00D0B1FA /* words.xcdatamodeld */,
 			);
 			path = "gapsi-test";
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				C498F23C1F280D2200D0B1FA /* AppDelegate.swift in Sources */,
 				C498F26B1F28100300D0B1FA /* LiverpoolAPI.swift in Sources */,
 				C498F2721F282CCE00D0B1FA /* ProductsTableViewController.swift in Sources */,
+				C498F2771F2840DF00D0B1FA /* words.xcdatamodeld in Sources */,
 				C498F2741F2834E600D0B1FA /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +645,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C498F2751F2840DF00D0B1FA /* words.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C498F2761F2840DF00D0B1FA /* words.xcdatamodel */,
+			);
+			currentVersion = C498F2761F2840DF00D0B1FA /* words.xcdatamodel */;
+			path = words.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C498F2301F280D2200D0B1FA /* Project object */;
 }

@@ -13,11 +13,16 @@ class ViewController: UIViewController {
     var products = [Product]()
 
     @IBOutlet weak var searchText: UITextField!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.loading.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,13 +32,15 @@ class ViewController: UIViewController {
 
     @IBAction func searchButton(_ sender: UIButton) {
         getCoursesPublic()
-        
     }
     
     func getCoursesPublic() {
+        self.loading.isHidden = false
+        loading.startAnimating()
         if searchText.text != nil {
             LiverpoolAPI().getProducts(wordSearch: searchText.text!) { (products) in
                 self.products = products!
+                self.loading.stopAnimating()
                 self.performSegue (withIdentifier: "showResult", sender: self)
             }
         } else {
@@ -41,6 +48,7 @@ class ViewController: UIViewController {
         }
         
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult" {

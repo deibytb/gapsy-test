@@ -32,8 +32,6 @@ class ProductsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        print(products.count)
         return products.count
     }
 
