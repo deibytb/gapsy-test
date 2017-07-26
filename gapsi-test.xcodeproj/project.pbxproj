@@ -21,6 +21,7 @@
 		C498F2721F282CCE00D0B1FA /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F2711F282CCE00D0B1FA /* ProductsTableViewController.swift */; };
 		C498F2741F2834E600D0B1FA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F2731F2834E600D0B1FA /* ProductTableViewCell.swift */; };
 		C498F2771F2840DF00D0B1FA /* core.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C498F2751F2840DF00D0B1FA /* core.xcdatamodeld */; };
+		C498F29A1F28471E00D0B1FA /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F2991F28471E00D0B1FA /* HistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C498F2711F282CCE00D0B1FA /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		C498F2731F2834E600D0B1FA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		C498F2761F2840DF00D0B1FA /* core.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = core.xcdatamodel; sourceTree = "<group>"; };
+		C498F2991F28471E00D0B1FA /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				C498F23D1F280D2200D0B1FA /* ViewController.swift */,
 				C498F2711F282CCE00D0B1FA /* ProductsTableViewController.swift */,
 				C498F2731F2834E600D0B1FA /* ProductTableViewCell.swift */,
+				C498F2991F28471E00D0B1FA /* HistoryTableViewController.swift */,
 				C498F23F1F280D2200D0B1FA /* Main.storyboard */,
 				C498F2421F280D2200D0B1FA /* Assets.xcassets */,
 				C498F2441F280D2200D0B1FA /* LaunchScreen.storyboard */,
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C498F29A1F28471E00D0B1FA /* HistoryTableViewController.swift in Sources */,
 				C498F23E1F280D2200D0B1FA /* ViewController.swift in Sources */,
 				C498F2701F2815A800D0B1FA /* Product.swift in Sources */,
 				C498F23C1F280D2200D0B1FA /* AppDelegate.swift in Sources */,

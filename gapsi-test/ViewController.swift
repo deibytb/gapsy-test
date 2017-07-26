@@ -38,14 +38,17 @@ class ViewController: UIViewController {
     func getCoursesPublic() {
         self.loading.isHidden = false
         loading.startAnimating()
-        if searchText.text != nil {
+        if searchText.text != "" {
             LiverpoolAPI().getProducts(wordSearch: searchText.text!) { (products) in
                 self.products = products!
                 self.loading.stopAnimating()
                 self.performSegue (withIdentifier: "showResult", sender: self)
             }
         } else {
+            searchText.placeholder = "Ejemplo: Xbox"
             print("Escribir un término para buscar")
+            self.loading.stopAnimating()
+            self.loading.isHidden = true
         }
         
     }

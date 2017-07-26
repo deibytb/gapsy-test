@@ -87,9 +87,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    
     func getContext () -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
+    }
+    
+    func getWords () {
+        let fetchRequest: NSFetchRequest = Search.fetchRequest()
+        
+        do {
+            let searchResults = try getContext().fetch(fetchRequest)
+            
+            print ("num of results = \(searchResults.count)")
+            
+            for search in searchResults as [NSManagedObject] {
+                print("\(String(describing: search.value(forKey: "word")))")
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
     }
     
 }
