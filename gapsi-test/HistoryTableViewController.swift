@@ -7,16 +7,35 @@
 //
 
 import UIKit
+import CoreData
 
 class HistoryTableViewController: UITableViewController {
     
-    
-    
+    var words = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managerContext = appDelegate.persistentContainer.viewContext
+        let wordsFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Search")
+        
+        do{
+            //results
+            let fetchedWordsSearch = try managerContext.fetch(wordsFetch) as! [Search]
+            
+            for word in fetchedWordsSearch{
+                if word.word != "" {
+                    words.append(word.word!)
+                }
+            }
+            
+            NSLog(String(fetchedWordsSearch.count))
+        }catch{
+            fatalError("Failed to fetch employees: \(error)")
+        }
+
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,23 +47,21 @@ class HistoryTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return words.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
+        cell.textLabel?.text = words[indexPath.row]
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

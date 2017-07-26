@@ -60,14 +60,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DIz-2W-kJJ">
-                        <barButtonItem key="rightBarButtonItem" title="Historial" style="plain" id="UM4-hY-HvA">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KAa-pk-rgQ">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Historial"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Historial de búsqueda" id="AAI-Wa-e94">
                             <connections>
-                                <segue destination="L5F-w2-8fl" kind="show" id="6u3-Xq-OFe"/>
+                                <segue destination="L5F-w2-8fl" kind="show" id="YeX-B3-Xtb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -116,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2N0-TY-KeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="-607"/>
+            <point key="canvasLocation" x="1338" y="-258"/>
         </scene>
         <!--Products Table View Controller-->
         <scene sceneID="nDd-3v-pWF">
