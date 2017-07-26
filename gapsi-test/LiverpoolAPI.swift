@@ -12,16 +12,16 @@ import Alamofire
 class LiverpoolAPI {
     
     // MARK: - Constants & Parameters
-    static let urlResults: String = "https://www.liverpool.com.mx/tienda?s=xbox&d3106047a194921c01969dfdec083925=json"
+    static let prevUrlResults: String = "https://www.liverpool.com.mx/tienda?s="
+    static let postUrlResults: String = "&d3106047a194921c01969dfdec083925=json"
     
     
     // MARK: - Functions
-    func getProducts(completionHandler: (([Product]?) -> Void)?) {
+    func getProducts(wordSearch: String, completionHandler: (([Product]?) -> Void)?) {
         
-        Alamofire.request(LiverpoolAPI.urlResults).responseJSON { response in
-            // print("Request: \(String(describing: response.request))")   // original url request
-            // print("Response: \(String(describing: response.response))") // http url response
-            // print("Result: \(response.result)")                         // response serialization result
+        let completeUrlResult = LiverpoolAPI.prevUrlResults + wordSearch + LiverpoolAPI.postUrlResults
+
+        Alamofire.request(completeUrlResult).responseJSON { response in
             
             var productsList = [Product]()
             
@@ -43,7 +43,6 @@ class LiverpoolAPI {
                     }
 
                 }
-//                print(productsList)
                 completionHandler?(productsList)
 
             }

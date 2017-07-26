@@ -31,10 +31,15 @@ class ViewController: UIViewController {
     }
     
     func getCoursesPublic() {
-        LiverpoolAPI().getProducts { (products) in
-            self.products = products!
-            self.performSegue (withIdentifier: "showResult", sender: self)
+        if searchText.text != nil {
+            LiverpoolAPI().getProducts(wordSearch: searchText.text!) { (products) in
+                self.products = products!
+                self.performSegue (withIdentifier: "showResult", sender: self)
+            }
+        } else {
+            print("Escribir un término para buscar")
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
