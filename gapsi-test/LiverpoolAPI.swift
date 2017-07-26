@@ -19,17 +19,35 @@ class LiverpoolAPI {
     func getProducts(completionHandler: (([Product]?) -> Void)?) {
         
         Alamofire.request(LiverpoolAPI.urlResults).responseJSON { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
+            // print("Request: \(String(describing: response.request))")   // original url request
+            // print("Response: \(String(describing: response.response))") // http url response
+            // print("Result: \(response.result)")                         // response serialization result
             
-            if let json = response.result.value {
-                print("JSON: \(json)") // serialized json response
+            var productsList = [Product]()
+            
+            if let result = response.result.value {
+                let json = result as! NSDictionary
+                let contents = json["contents"] as! [[String: AnyObject]]
+                
+                for content in contents {
+                    let mainContent = content["mainContent"] as! [[String: AnyObject]]
+                    let results = mainContent.last?["contents"] as! [[String: AnyObject]]
+                    
+                    for result in results {
+                        let records = result["records"] as! [[String: AnyObject]]
+                        for record in records {
+                            let attributes = record["attributes"] as! NSDictionary
+                            let newProduct = Product(dictionary: attributes)
+                            productsList.append(newProduct!)
+                        }
+                    }
+
+                }
+//                print(productsList)
+                completionHandler?(productsList)
+
             }
             
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-            }
         }
         
     }

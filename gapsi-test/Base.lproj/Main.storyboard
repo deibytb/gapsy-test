@@ -1,28 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0iY-iB-HAf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MFW-ig-Rti">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--View Controller-->
+        <scene sceneID="M77-fQ-zcx">
+            <objects>
+                <viewController id="MFW-ig-Rti" customClass="ViewController" customModule="gapsi_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jqq-EA-wxb"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1K-Gp-zrX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3tV-Si-efW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEx-Nt-iRu">
+                                <rect key="frame" x="16" y="280" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edf-2T-n6U">
+                                <rect key="frame" x="163" y="318" width="48" height="30"/>
+                                <state key="normal" title="Buscar"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="MFW-ig-Rti" eventType="touchUpInside" id="xoG-GZ-K1t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buscar un producto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qx-hL-ZQK">
+                                <rect key="frame" x="112" y="251" width="151" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BEx-Nt-iRu" firstAttribute="leading" secondItem="3tV-Si-efW" secondAttribute="leadingMargin" id="3Ha-ex-aW2"/>
+                            <constraint firstItem="Edf-2T-n6U" firstAttribute="centerX" secondItem="3tV-Si-efW" secondAttribute="centerX" id="7of-S7-1Fu"/>
+                            <constraint firstItem="5Qx-hL-ZQK" firstAttribute="centerX" secondItem="3tV-Si-efW" secondAttribute="centerX" id="LlT-K8-qm2"/>
+                            <constraint firstItem="BEx-Nt-iRu" firstAttribute="top" secondItem="5Qx-hL-ZQK" secondAttribute="bottom" constant="8" id="Nox-zF-NXF"/>
+                            <constraint firstItem="Edf-2T-n6U" firstAttribute="centerY" secondItem="3tV-Si-efW" secondAttribute="centerY" id="V7g-AR-qXi"/>
+                            <constraint firstItem="Edf-2T-n6U" firstAttribute="top" secondItem="BEx-Nt-iRu" secondAttribute="bottom" constant="8" id="f7s-fk-WiX"/>
+                            <constraint firstItem="BEx-Nt-iRu" firstAttribute="trailing" secondItem="3tV-Si-efW" secondAttribute="trailingMargin" id="kkX-Cz-KhK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchText" destination="BEx-Nt-iRu" id="ZYw-nG-Q1T"/>
+                        <segue destination="0iY-iB-HAf" kind="show" identifier="showResult" id="jAz-XB-IiQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNG-w3-VpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-306" y="133"/>
+        </scene>
+        <!--Products Table View Controller-->
         <scene sceneID="nDd-3v-pWF">
             <objects>
-                <tableViewController id="0iY-iB-HAf" sceneMemberID="viewController">
+                <tableViewController id="0iY-iB-HAf" customClass="ProductsTableViewController" customModule="gapsi_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" id="z4h-w0-SGr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="98" id="mRJ-74-qP4">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="98" id="mRJ-74-qP4" customClass="ProductTableViewCell" customModule="gapsi_test" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mRJ-74-qP4" id="lgU-T8-lvg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbL-L2-28H">
@@ -43,7 +96,7 @@
                                             <color key="textColor" red="0.2147045822680182" green="0.89637305699481862" blue="0.42928945079143221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ubication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxj-El-eph">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxj-El-eph">
                                             <rect key="frame" x="113" y="66" width="62" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -52,6 +105,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageProduct" destination="rbL-L2-28H" id="K9n-og-YOA"/>
+                                    <outlet property="locationLabel" destination="rxj-El-eph" id="5C2-Sq-efb"/>
+                                    <outlet property="priceLabel" destination="grg-Ez-TA9" id="g4s-lh-CV0"/>
+                                    <outlet property="titleLabel" destination="UzX-ix-B8u" id="XXU-hY-pUg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
-class Product {
+struct Product {
+    
+    
     // MARK: - Constants & Parameters
     
     static let dictionaryKeyTitle = "product.displayName"
@@ -20,32 +23,36 @@ class Product {
     // MARK: - Properties
     
     var title: String?
-    var price: Float = Float(0.0)
+    var price: String?
     var geo: String? = "Ninguna"
-    var imageUrl: String?
+    var image: UIImage?
     
     
     // MARK: - Initialization
     
     init?(dictionary: NSDictionary) {
         
-        guard let title = dictionary[Product.dictionaryKeyTitle] as? String
-            where title.characters.count > 0 else {
-                return
+        if let title = dictionary[Product.dictionaryKeyTitle] as? [String] {
+            self.title = title.first
+        } else {
+            self.title = "No se encontró un título"
         }
         
-        guard let price = dictionary[Product.dictionaryKeyPrice] as? Float
-            where price > 0.0 else {
-                return
+        if let price = dictionary[Product.dictionaryKeyPrice] as? [String] {
+            self.price = price.first!
+        } else {
+            self.price = "No se encontró un precio"
         }
         
-        guard let imageUrl = dictionary[Product.dictionaryKeyImageUrl] as? String
-            where imageUrl.characters.count > 0 else {
-                return
+        if let imageUrl = dictionary[Product.dictionaryKeyImageUrl] as? [String] {
+            if let imageUrl = imageUrl.first {
+                if let url = NSURL(string: imageUrl) {
+                    if let data = NSData(contentsOf: url as URL) {
+                        self.image = UIImage(data: data as Data)
+                    }
+                }
+            }
         }
         
-        self.title = title
-        self.price = price
-        self.imageUrl = imageUrl
     }
 }

@@ -18,6 +18,8 @@
 		C498F26B1F28100300D0B1FA /* LiverpoolAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F26A1F28100300D0B1FA /* LiverpoolAPI.swift */; };
 		C498F26D1F28109D00D0B1FA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C498F26C1F28109D00D0B1FA /* Podfile */; };
 		C498F2701F2815A800D0B1FA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F26F1F2815A800D0B1FA /* Product.swift */; };
+		C498F2721F282CCE00D0B1FA /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F2711F282CCE00D0B1FA /* ProductsTableViewController.swift */; };
+		C498F2741F2834E600D0B1FA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F2731F2834E600D0B1FA /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +57,10 @@
 		C498F25B1F280D2200D0B1FA /* gapsi_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gapsi_testUITests.swift; sourceTree = "<group>"; };
 		C498F25D1F280D2200D0B1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C498F26A1F28100300D0B1FA /* LiverpoolAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiverpoolAPI.swift; sourceTree = "<group>"; };
-		C498F26C1F28109D00D0B1FA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C498F26C1F28109D00D0B1FA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C498F26F1F2815A800D0B1FA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C498F2711F282CCE00D0B1FA /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		C498F2731F2834E600D0B1FA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 				C498F26E1F28157400D0B1FA /* Model */,
 				C498F23B1F280D2200D0B1FA /* AppDelegate.swift */,
 				C498F23D1F280D2200D0B1FA /* ViewController.swift */,
+				C498F2711F282CCE00D0B1FA /* ProductsTableViewController.swift */,
+				C498F2731F2834E600D0B1FA /* ProductTableViewCell.swift */,
 				C498F23F1F280D2200D0B1FA /* Main.storyboard */,
 				C498F2421F280D2200D0B1FA /* Assets.xcassets */,
 				C498F2441F280D2200D0B1FA /* LaunchScreen.storyboard */,
@@ -364,6 +370,8 @@
 				C498F2701F2815A800D0B1FA /* Product.swift in Sources */,
 				C498F23C1F280D2200D0B1FA /* AppDelegate.swift in Sources */,
 				C498F26B1F28100300D0B1FA /* LiverpoolAPI.swift in Sources */,
+				C498F2721F282CCE00D0B1FA /* ProductsTableViewController.swift in Sources */,
+				C498F2741F2834E600D0B1FA /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
