@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8EC9F6516AD4D8046BC1552 /* Pods_gapsi_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B345C0B807657BD8E14B365 /* Pods_gapsi_test.framework */; };
 		C498F23C1F280D2200D0B1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F23B1F280D2200D0B1FA /* AppDelegate.swift */; };
 		C498F23E1F280D2200D0B1FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F23D1F280D2200D0B1FA /* ViewController.swift */; };
 		C498F2411F280D2200D0B1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C498F23F1F280D2200D0B1FA /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		C498F2461F280D2200D0B1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C498F2441F280D2200D0B1FA /* LaunchScreen.storyboard */; };
 		C498F2511F280D2200D0B1FA /* gapsi_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F2501F280D2200D0B1FA /* gapsi_testTests.swift */; };
 		C498F25C1F280D2200D0B1FA /* gapsi_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F25B1F280D2200D0B1FA /* gapsi_testUITests.swift */; };
+		C498F26B1F28100300D0B1FA /* LiverpoolAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F26A1F28100300D0B1FA /* LiverpoolAPI.swift */; };
+		C498F26D1F28109D00D0B1FA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C498F26C1F28109D00D0B1FA /* Podfile */; };
+		C498F2701F2815A800D0B1FA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498F26F1F2815A800D0B1FA /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C801152A8B75C28A3078925 /* Pods-gapsi-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gapsi-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-gapsi-test/Pods-gapsi-test.release.xcconfig"; sourceTree = "<group>"; };
+		5B345C0B807657BD8E14B365 /* Pods_gapsi_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gapsi_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE5719BC19713B3DB36CBA2 /* Pods-gapsi-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gapsi-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gapsi-test/Pods-gapsi-test.debug.xcconfig"; sourceTree = "<group>"; };
 		C498F2381F280D2200D0B1FA /* gapsi-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gapsi-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C498F23B1F280D2200D0B1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C498F23D1F280D2200D0B1FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 		C498F2571F280D2200D0B1FA /* gapsi-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gapsi-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C498F25B1F280D2200D0B1FA /* gapsi_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gapsi_testUITests.swift; sourceTree = "<group>"; };
 		C498F25D1F280D2200D0B1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C498F26A1F28100300D0B1FA /* LiverpoolAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiverpoolAPI.swift; sourceTree = "<group>"; };
+		C498F26C1F28109D00D0B1FA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C498F26F1F2815A800D0B1FA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8EC9F6516AD4D8046BC1552 /* Pods_gapsi_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +85,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BAD68CB183DB250F730BC39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACE5719BC19713B3DB36CBA2 /* Pods-gapsi-test.debug.xcconfig */,
+				4C801152A8B75C28A3078925 /* Pods-gapsi-test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		42A2DFBE377D515D540B29CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B345C0B807657BD8E14B365 /* Pods_gapsi_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C498F22F1F280D2200D0B1FA = {
 			isa = PBXGroup;
 			children = (
+				C498F26C1F28109D00D0B1FA /* Podfile */,
 				C498F23A1F280D2200D0B1FA /* gapsi-test */,
 				C498F24F1F280D2200D0B1FA /* gapsi-testTests */,
 				C498F25A1F280D2200D0B1FA /* gapsi-testUITests */,
 				C498F2391F280D2200D0B1FA /* Products */,
+				2BAD68CB183DB250F730BC39 /* Pods */,
+				42A2DFBE377D515D540B29CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +128,8 @@
 		C498F23A1F280D2200D0B1FA /* gapsi-test */ = {
 			isa = PBXGroup;
 			children = (
+				C498F2691F280FE300D0B1FA /* API */,
+				C498F26E1F28157400D0B1FA /* Model */,
 				C498F23B1F280D2200D0B1FA /* AppDelegate.swift */,
 				C498F23D1F280D2200D0B1FA /* ViewController.swift */,
 				C498F23F1F280D2200D0B1FA /* Main.storyboard */,
@@ -125,6 +158,22 @@
 			path = "gapsi-testUITests";
 			sourceTree = "<group>";
 		};
+		C498F2691F280FE300D0B1FA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C498F26A1F28100300D0B1FA /* LiverpoolAPI.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		C498F26E1F28157400D0B1FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C498F26F1F2815A800D0B1FA /* Product.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C498F2601F280D2200D0B1FA /* Build configuration list for PBXNativeTarget "gapsi-test" */;
 			buildPhases = (
+				110E90319DB7B12E4BEC87EB /* [CP] Check Pods Manifest.lock */,
 				C498F2341F280D2200D0B1FA /* Sources */,
 				C498F2351F280D2200D0B1FA /* Frameworks */,
 				C498F2361F280D2200D0B1FA /* Resources */,
+				9C40072A08F8BBEFEC6EB53A /* [CP] Embed Pods Frameworks */,
+				FCF955CA8D9CEBE30E92C2B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +286,7 @@
 			files = (
 				C498F2461F280D2200D0B1FA /* LaunchScreen.storyboard in Resources */,
 				C498F2431F280D2200D0B1FA /* Assets.xcassets in Resources */,
+				C498F26D1F28109D00D0B1FA /* Podfile in Resources */,
 				C498F2411F280D2200D0B1FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +307,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		110E90319DB7B12E4BEC87EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C40072A08F8BBEFEC6EB53A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gapsi-test/Pods-gapsi-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCF955CA8D9CEBE30E92C2B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gapsi-test/Pods-gapsi-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C498F2341F280D2200D0B1FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C498F23E1F280D2200D0B1FA /* ViewController.swift in Sources */,
+				C498F2701F2815A800D0B1FA /* Product.swift in Sources */,
 				C498F23C1F280D2200D0B1FA /* AppDelegate.swift in Sources */,
+				C498F26B1F28100300D0B1FA /* LiverpoolAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +515,7 @@
 		};
 		C498F2611F280D2200D0B1FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE5719BC19713B3DB36CBA2 /* Pods-gapsi-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "gapsi-test/Info.plist";
@@ -424,6 +528,7 @@
 		};
 		C498F2621F280D2200D0B1FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C801152A8B75C28A3078925 /* Pods-gapsi-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "gapsi-test/Info.plist";
@@ -507,6 +612,7 @@
 				C498F2621F280D2200D0B1FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C498F2631F280D2200D0B1FA /* Build configuration list for PBXNativeTarget "gapsi-testTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +621,7 @@
 				C498F2651F280D2200D0B1FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C498F2661F280D2200D0B1FA /* Build configuration list for PBXNativeTarget "gapsi-testUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +630,7 @@
 				C498F2681F280D2200D0B1FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
